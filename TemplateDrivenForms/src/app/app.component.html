@@ -1,6 +1,6 @@
 <div class="container-fluid mb-5">
 <h1>Form example</h1>
-<form #userForm="ngForm" (ngSubmit)="onSubmit" novalidate>
+<form #userForm="ngForm" *ngIf="!submitted" (ngSubmit)="onSubmit()" novalidate>
   {{ userForm.form.valid}}
   <div class="form-group">
     <label>Name</label>
