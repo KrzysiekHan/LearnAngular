@@ -1,7 +1,7 @@
 <div class="container-fluid">
   <h2>Registration Form</h2>
   <form [formGroup]="registrationForm">
-
+      {{registrationForm.value | json}}
     <div class="form-group">
       <label>Username</label>
       <input formControlName="userName" type="text" class="form-control">
@@ -17,9 +17,25 @@
         <input formControlName="confirmPassword" type="password" class="form-control">
     </div>
 
+    <!-- grupa adres -->
+    <div formGroupName="address">
+        <div class="form-group">
+            <label>City</label>
+            <input formControlName="city" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>State</label>
+            <input formControlName="state" type="text" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>PostalCode</label>
+            <input formControlName="postalCode" type="text" class="form-control">
+        </div>
+    </div>
+
     <button class="btn btn-primary" type="submit">
         Register
     </button>
-      {{registrationForm.value | json}}
+
   </form>
 </div>
