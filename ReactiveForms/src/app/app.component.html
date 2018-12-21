@@ -11,7 +11,7 @@
     <div *ngIf="userName.invalid && userName.touched">
         <small *ngIf="userName.errors ?.required" class="text-danger">UserName is required</small>
         <small *ngIf="userName.errors ?.minlength" class="text-danger">Username must be at least 3 characters</small>
-        <small *ngIf="userName.errors ?.forbiddenName" class="text-danger"> {{userName.error ?.forbiddenName.value}} username not allowed</small>
+        <small *ngIf="userName.errors ?.forbiddenName" class="text-danger"> {{userName.errors ?.forbiddenName.value}} username not allowed</small>
     </div>
     
     </div>
