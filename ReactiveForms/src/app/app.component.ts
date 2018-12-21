@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { forbiddenNameValidator } from './shared/user-name.validator';
+import { PasswordValidator } from './shared/password.validator';
 
 
 @Component({
@@ -25,7 +26,7 @@ registrationForm = this.fb.group({
     state: [''],
     postalCode: ['']
   })
-});
+}, {validator: PasswordValidator});
 
   loadApiData() {
     this.registrationForm.patchValue({
